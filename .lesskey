@@ -1,0 +1,2 @@
+#env
+LESS = -x4 --use-color -Dd+r$Du+b
