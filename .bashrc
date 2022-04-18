@@ -6,7 +6,9 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
+alias docker='sudo docker'
+alias ssh='TERM=xterm-256color ssh'
 
 GREEN="$(tput setaf 2)"
 RESET="$(tput sgr0)"
