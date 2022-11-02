@@ -44,6 +44,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -197,6 +201,10 @@ bar {
 }
 
 # borderless and no title
-hide_edge_borders both
-default_border pixel 0
-default_floating_border pixel 0
+#hide_edge_borders both
+#default_border pixel 0
+#default_floating_border pixel 0
+
+# auto start redshift with Dublin as location
+exec --no-startup-id redshift -l 53.33306:-6.24889
+exec_always --no-startup-id dunst
