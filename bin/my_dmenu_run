@@ -1,0 +1,7 @@
+#!/bin/sh
+# different to /usr/bin/demnu_run in that it doesnt have the extra bash process
+# however the dmenu project won't accept this change because it removes the ability to run
+# shell commands from demnu_run
+# There was another version that does both but was not responded to
+# https://lists.suckless.org/hackers/1902/16683.html
+exec $(dmenu_path | dmenu "$@") &
