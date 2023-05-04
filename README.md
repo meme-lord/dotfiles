@@ -1,6 +1,6 @@
 # Dotfiles
 
-Created by following this guide from Ackama: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
+Created this repo by following this guide from Ackama: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
 
 # Installation
 ```

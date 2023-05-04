@@ -1,0 +1,1 @@
+cat /dev/stdin | sed 's/-/+/g' | sed 's|_|/|g' | base64 -d

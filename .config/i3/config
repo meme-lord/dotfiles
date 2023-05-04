@@ -154,7 +154,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec sh -c '[ $(printf "yes\nno" | dmenu -i -p "Do you really want to exit i3?") = "yes" ] && i3-msg exit'
 
 # lock i3
 bindsym $mod+l exec "i3lock_fancy"
@@ -206,8 +207,9 @@ bar {
 #default_floating_border pixel 0
 
 # Window settings
-for_window [class="KeePass2" instance="keepass2"] floating enable
+for_window [class="KeePass2" instance="keepass2"] floating enable, resize set 1000 600
 
 # auto start redshift with Dublin as location
 exec --no-startup-id redshift -l 53.33306:-6.24889
 exec --no-startup-id dunst
+exec --no-startup-id xrandr --output DP-2 --rotate right --right-of DP-0 # TODO: this should be in xorg config

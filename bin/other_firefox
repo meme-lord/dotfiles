@@ -1,0 +1,2 @@
+firefox-developer-edition --new-instance &
+disown

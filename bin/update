@@ -1,0 +1,23 @@
+#!/bin/bash
+# Update pacman mirrors with 20 fastest ever 30 days
+MIRRORS_LAST_MODIFIED=$(stat --format %Y /etc/pacman.d/mirrorlist)
+TODAY=$(date +%s)
+if [[ $(( TODAY - MIRRORS_LAST_MODIFIED )) -gt 2592000 ]] # 30 days
+then
+	echo "Updating Mirrorlist"
+	curl -s https://archlinux.org/mirrorlist/all/https/ | sed -e 's/^#Server/Server/' -e '/^#/d' > /tmp/mirrors2check
+	rankmirrors -n 20 -p -v /tmp/mirrors2check | sudo tee /etc/pacman.d/mirrorlist 1>/dev/null
+fi
+sudo pacman -Syu
+yay
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
+go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+go install -v github.com/ffuf/ffuf@latest
+go install github.com/sw33tLie/sns@latest
+# TODO:
+# Something to notify if theres a BIOS update
+# The page at https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F isn't friendly to parsing
+# to get BIOS version: dmidecode -s bios-version
+#
+# Removing orphaned packages?

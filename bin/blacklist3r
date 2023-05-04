@@ -1,0 +1,1 @@
+WINEDEBUG=-all wine ~/progs/blacklist3r/AspDotNetWrapper.exe --keypath ~/progs/blacklist3r/MachineKeys.txt --encrypteddata "$1" --purpose=viewstate --modifier="$2" --macdecode

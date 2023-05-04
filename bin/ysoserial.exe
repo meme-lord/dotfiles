@@ -1,0 +1,1 @@
+WINEDEBUG=-all wine ~/progs/ysoserial.net/ysoserial.exe "$@"

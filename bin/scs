@@ -1,0 +1,2 @@
+# takes screenshot and saves to tmp
+maim -s > /tmp/screenshot.png
