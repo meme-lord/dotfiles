@@ -14,7 +14,6 @@ alias ssh='TERM=xterm-256color ssh'
 
 PS1='\[\e[32m\][\u \W]\$ \[\e[m\]'
 #PS1='[\u@\h \W]\$ '
-export PATH=$PATH:~/bin:~/go/bin:/home/chieftan/.local/bin
 export EDITOR=nano
 export HISTCONTROL=ignoredups
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
