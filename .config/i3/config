@@ -211,5 +211,9 @@ for_window [class="KeePass2" instance="keepass2"] floating enable, resize set 10
 
 # auto start redshift with Dublin as location
 exec --no-startup-id redshift -l 53.33306:-6.24889
+
 exec --no-startup-id dunst
 exec --no-startup-id xrandr --output DP-2 --rotate right --right-of DP-0 # TODO: this should be in xorg config
+
+# run i3wsr for renaming workspaces
+exec_always --no-startup-id /usr/bin/i3wsr

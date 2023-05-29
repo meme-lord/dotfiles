@@ -2,6 +2,8 @@
 
 Created this repo by following this guide from Ackama: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
 
+I wrote about my laptop setup here: https://0daysto.live/posts/arch_linux_ricing/
+
 # Installation
 ```
 echo ".cfg" >> .gitignore
