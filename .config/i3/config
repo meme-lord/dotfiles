@@ -202,12 +202,15 @@ bar {
 }
 
 # borderless and no title
-#hide_edge_borders both
+hide_edge_borders both
 #default_border pixel 0
 #default_floating_border pixel 0
+smart_borders on
 
 # Window settings
 for_window [class="KeePass2" instance="keepass2"] floating enable, resize set 1000 600
+for_window [class="firefoxdeveloperedition"] border pixel 2
+for_window [class="discord"] border pixel 2
 
 # auto start redshift with Dublin as location
 exec --no-startup-id redshift -l 53.33306:-6.24889
@@ -217,3 +220,4 @@ exec --no-startup-id xrandr --output DP-2 --rotate right --right-of DP-0 # TODO:
 
 # run i3wsr for renaming workspaces
 exec_always --no-startup-id /usr/bin/i3wsr
+
