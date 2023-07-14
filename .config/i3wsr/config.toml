@@ -1,15 +1,20 @@
 [icons]
 # font awesome
 #TelegramDesktop = ""
-firefox = ""
+firefox = ""
 Alacritty = ""
 discord = ""
 obsidian = ""
+Steam = ""
+wine = ""
+mpv = ""
+Code = ""
 #Thunderbird = ""
 #Nautilus = "📘"
 
 [aliases]
 "firefox.*" = "firefox"
+"explorer.exe" = "wine"
 #TelegramDesktop = "Telegram"
 #"Org\\.gnome\\.Nautilus" = "Nautilus"
 

@@ -15,6 +15,8 @@ go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@lates
 go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/ffuf/ffuf@latest
 go install github.com/sw33tLie/sns@latest
+go install github.com/bitquark/shortscan/cmd/shortscan@latest
+
 # TODO:
 # Something to notify if theres a BIOS update
 # The page at https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F isn't friendly to parsing
