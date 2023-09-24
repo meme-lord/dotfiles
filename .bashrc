@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias dotfiles='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'
 alias pacman='sudo pacman'
 alias openvpn='sudo openvpn'
 alias ssh='TERM=xterm-256color ssh'

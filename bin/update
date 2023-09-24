@@ -13,10 +13,11 @@ yay
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
 go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
 go install -v github.com/ffuf/ffuf@latest
 go install github.com/sw33tLie/sns@latest
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
-
+go install github.com/jesseduffield/lazydocker@latest
 # TODO:
 # Something to notify if theres a BIOS update
 # The page at https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F isn't friendly to parsing

