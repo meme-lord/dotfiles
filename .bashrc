@@ -19,5 +19,5 @@ export EDITOR=nano
 export HISTCONTROL=ignoredups
 export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export XCURSOR_SIZE=32
+export SCREENRC=$HOME/.config/screenrc
 complete -cf sudo
-
