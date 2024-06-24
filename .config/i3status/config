@@ -9,8 +9,10 @@
 general {
         colors = true
         interval = 10
+        output_format = i3bar
 }
 
+order += "tztime empty_ws"
 order += "volume master"
 # order += "ipv6"
 order += "wireless _first_"
@@ -51,6 +53,10 @@ memory {
 
 tztime local {
         format = "%a %Y-%m-%d %H:%M:%S"
+}
+
+tztime empty_ws {
+        format = "empty_ws"
 }
 
 volume master{

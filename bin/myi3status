@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# This was made using code from i3status/contrib/any_position_wrapper.sh
+# It adds an entry to the i3status that gives the number of the next unused workspace
+# Needs jq installed
+
+function update_holder {
+  local instance="$1"
+  local replacement="$2"
+  echo "$json_array" | jq --argjson arg_j "$replacement" "(.[] | (select(.instance==\"$instance\"))) |= \$arg_j"
+}
+
+function update_first_empty_ws {
+	local first_empty_ws=`comm -23 <(seq 10) <(i3-msg -t get_workspaces | jq '.[].num' | sort -h) 2>/dev/null | head -n 1`
+	local json="{ \"full_text\": \"Empty WS: $first_empty_ws\" }"
+	json_array=$(update_holder empty_ws "$json")
+}
+
+i3status | (read line; echo "$line"; read line ; echo "$line" ; read line ; echo "$line" ; while true
+do
+  read line
+  json_array="$(echo $line | sed -e 's/^,//')"
+  update_first_empty_ws
+  echo ",$json_array"
+done)

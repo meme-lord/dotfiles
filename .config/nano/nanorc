@@ -13,6 +13,7 @@ include /usr/share/nano/sql.nanorc
 include /usr/share/nano/ruby.nanorc
 include /usr/share/nano/rust.nanorc
 include /usr/share/nano/yaml.nanorc
+include ~/.config/nano/csharp.nanorc
 
 set tabsize 4
 set constantshow

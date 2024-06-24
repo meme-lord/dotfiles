@@ -12,9 +12,10 @@ Code = ""
 #Thunderbird = ""
 #Nautilus = "📘"
 
-[aliases]
+[aliases.class]
 "firefox.*" = "firefox"
 "explorer.exe" = "wine"
+"code-oss" = "Code"
 #TelegramDesktop = "Telegram"
 #"Org\\.gnome\\.Nautilus" = "Nautilus"
 

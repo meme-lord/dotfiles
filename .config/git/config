@@ -3,3 +3,4 @@
 	email = meme-lord@users.noreply.github.com
 [core]
 	editor = nano
+	compression = 1

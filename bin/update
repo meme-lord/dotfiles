@@ -10,17 +10,32 @@ then
 fi
 sudo pacman -Syu
 yay
-go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest
 go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/ffuf/ffuf@latest
 go install github.com/sw33tLie/sns@latest
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
 go install github.com/jesseduffield/lazydocker@latest
+go install github.com/ffuf/ffuf/v2@latest
+go install github.com/lc/gau/v2/cmd/gau@latest
 # TODO:
 # Something to notify if theres a BIOS update
 # The page at https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F isn't friendly to parsing
 # to get BIOS version: dmidecode -s bios-version
 #
 # Removing orphaned packages?
+sudo python3 -m pip install --upgrade semgrep semgrep-rules-manager --break-system-packages
+semgrep-rules-manager --dir ~/semgrep-rules sync
+rm ~/semgrep-rules/elttam/.pre-commit-config.yaml
+rm ~/semgrep-rules/community/.pre-commit-config.yaml
+rm ~/semgrep-rules/gitlab/.gitlab-ci.yml
+rm -rf ~/semgrep-rules/gitlab/ci/
+rm -rf ~/semgrep-rules/gitlab/qa/
+rm -rf ~/semgrep-rules/trailofbits/.github/
+rm -rf ~/semgrep-rules/community/.github/
+rm -rf ~/semgrep-rules/elttam/.github/

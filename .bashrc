@@ -21,3 +21,7 @@ export LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export XCURSOR_SIZE=32
 export SCREENRC=$HOME/.config/screenrc
 complete -cf sudo
+
+export PATH="$PATH:/home/chieftan/.foundry/bin:/home/chieftan/.local/share/gem/ruby/3.0.0/bin"
+export GOPATH="/home/chieftan/go"
+export SEMGREP_RULES="~/semgrep-rules/"

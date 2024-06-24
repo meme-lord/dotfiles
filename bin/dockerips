@@ -1,0 +1,1 @@
+sudo docker ps -q | xargs -n 1 sudo docker inspect --format '{{ .Name }} {{range .NetworkSettings.Networks}} {{.IPAddress}}{{end}}' | sed 's#^/##';
