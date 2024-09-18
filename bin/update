@@ -31,11 +31,11 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 # Removing orphaned packages?
 sudo python3 -m pip install --upgrade semgrep semgrep-rules-manager --break-system-packages
 semgrep-rules-manager --dir ~/semgrep-rules sync
-rm ~/semgrep-rules/elttam/.pre-commit-config.yaml
-rm ~/semgrep-rules/community/.pre-commit-config.yaml
-rm ~/semgrep-rules/gitlab/.gitlab-ci.yml
-rm -rf ~/semgrep-rules/gitlab/ci/
-rm -rf ~/semgrep-rules/gitlab/qa/
-rm -rf ~/semgrep-rules/trailofbits/.github/
-rm -rf ~/semgrep-rules/community/.github/
-rm -rf ~/semgrep-rules/elttam/.github/
+rm -f ~/semgrep-rules/elttam/.pre-commit-config.yaml \
+  ~/semgrep-rules/community/.pre-commit-config.yaml \
+  ~/semgrep-rules/gitlab/.gitlab-ci.yml
+rm -rf ~/semgrep-rules/gitlab/ci/ \
+  ~/semgrep-rules/gitlab/qa/ \
+  ~/semgrep-rules/trailofbits/.github/ \
+  ~/semgrep-rules/community/.github/ \
+  ~/semgrep-rules/elttam/.github/

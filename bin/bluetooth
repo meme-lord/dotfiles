@@ -2,4 +2,5 @@
 systemctl start bluetooth
 sleep 4
 bluetoothctl connect C0:86:B3:6B:62:DB
-pacmd set-card-profile bluez_card.C0_86_B3_6B_62_DB a2dp_sink
+# handsfree_head_unit
+#pacmd set-card-profile bluez_card.C0_86_B3_6B_62_DB a2dp_sink

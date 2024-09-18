@@ -96,9 +96,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -107,7 +107,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -215,12 +215,14 @@ smart_borders on
 # Window settings
 for_window [class="KeePass2" instance="keepass2"] floating enable, resize set 1000 600
 for_window [class="firefoxdeveloperedition"] border pixel 2
+for_window [class="firefox-developer-edition"] border pixel 2 # why did they change the class name lol
 for_window [class="discord"] border pixel 2
 
 # auto start redshift with Dublin as location
 exec --no-startup-id redshift -l 53.33306:-6.24889
 
 exec --no-startup-id dunst
+exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144.00
 #exec --no-startup-id xrandr --output DP-2 --rotate right --right-of DP-0 # TODO: this should be in xorg config
 
 # run i3wsr for renaming workspaces
