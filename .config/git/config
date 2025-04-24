@@ -4,3 +4,5 @@
 [core]
 	editor = nano
 	compression = 1
+#[url "git@github.com:"]
+#    insteadOf = https://github.com/

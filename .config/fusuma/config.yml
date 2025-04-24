@@ -1,0 +1,11 @@
+swipe:
+  3:
+    left:
+      command: "xdotool key Super_L+Shift+Tab" # Previous workspace
+    right:
+      command: "xdotool key Super_L+Tab" # Next workspace
+  4:
+    left:
+      command: "xdotool key Super_L+Shift+Tab" # Previous workspace
+    right:
+      command: "xdotool key Super_L+Tab" # Next workspace

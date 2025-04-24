@@ -17,19 +17,28 @@ go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-go install -v github.com/ffuf/ffuf@latest
+#go install -v github.com/ffuf/ffuf@latest
 go install github.com/sw33tLie/sns@latest
 go install github.com/bitquark/shortscan/cmd/shortscan@latest
 go install github.com/jesseduffield/lazydocker@latest
 go install github.com/ffuf/ffuf/v2@latest
 go install github.com/lc/gau/v2/cmd/gau@latest
+go install github.com/projectdiscovery/alterx/cmd/alterx@latest
+go install -v github.com/tomnomnom/anew@latest
+go install github.com/iangcarroll/cookiemonster/cmd/cookiemonster@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
+go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+go install github.com/sensepost/gowitness@latest
+go install honnef.co/go/tools/cmd/staticcheck@latest
+go install github.com/projectdiscovery/tldfinder/cmd/tldfinder@latest
+gem update fusuma
 # TODO:
 # Something to notify if theres a BIOS update
 # The page at https://knowledgebase.frame.work/en_us/framework-laptop-bios-releases-S1dMQt6F isn't friendly to parsing
 # to get BIOS version: dmidecode -s bios-version
 #
 # Removing orphaned packages?
-sudo python3 -m pip install --upgrade semgrep semgrep-rules-manager --break-system-packages
+#python3 -m pip install --upgrade semgrep git+https://github.com/iosifache/semgrep-rules-manager.git --break-system-packages
 semgrep-rules-manager --dir ~/semgrep-rules sync
 rm -f ~/semgrep-rules/elttam/.pre-commit-config.yaml \
   ~/semgrep-rules/community/.pre-commit-config.yaml \
