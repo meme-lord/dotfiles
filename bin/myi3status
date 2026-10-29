@@ -16,10 +16,22 @@ function update_first_empty_ws {
 	json_array=$(update_holder empty_ws "$json")
 }
 
-i3status | (read line; echo "$line"; read line ; echo "$line" ; read line ; echo "$line" ; while true
+# Shows active WireGuard interfaces; empty full_text makes i3bar hide the block
+function update_wireguard {
+	local wg_ifaces=`ip -br link show type wireguard 2>/dev/null | awk '{print $1}' | paste -sd,`
+	local json="{ \"full_text\": \"\" }"
+	if [ -n "$wg_ifaces" ]; then
+		json="{ \"full_text\": \"VPN: $wg_ifaces\", \"color\": \"#00FF00\" }"
+	fi
+	json_array=$(update_holder wireguard "$json")
+}
+
+i3status | (read line; echo "$line"; read line ; echo "$line" ; prefix="" ; while true
 do
   read line
   json_array="$(echo $line | sed -e 's/^,//')"
   update_first_empty_ws
-  echo ",$json_array"
+  update_wireguard
+  echo "$prefix$json_array"
+  prefix=","
 done)

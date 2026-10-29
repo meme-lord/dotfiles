@@ -15,6 +15,7 @@ general {
 order += "tztime empty_ws"
 order += "volume master"
 # order += "ipv6"
+order += "tztime wireguard"
 order += "wireless _first_"
 # order += "ethernet _first_"
 order += "battery all"
@@ -57,6 +58,11 @@ tztime local {
 
 tztime empty_ws {
         format = "empty_ws"
+}
+
+# placeholder, filled in by myi3status
+tztime wireguard {
+        format = "wireguard"
 }
 
 volume master{
